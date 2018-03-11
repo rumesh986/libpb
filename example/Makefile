@@ -1,5 +1,5 @@
 CC = gcc
-LDLIBS = -lpthread -lcurl -lcjson -lpb
+LDLIBS = -lpthread -lpb
 
 build:
 	$(CC) -c pb-cli-example.c -o pb-cli-example.o
