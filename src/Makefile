@@ -1,4 +1,5 @@
 CC = gcc
+LDLIBS = -lcurl -lcjson
 
 build:
 	$(CC) -c -fPIC libpb.c -o libpb.o
