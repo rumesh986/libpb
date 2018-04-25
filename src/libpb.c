@@ -44,11 +44,11 @@ int libpb_setup(const char s_token[100]) {
 	curl_global_init(CURL_GLOBAL_ALL);
 }
 
-size_t post_cb(const char *data, size_t size, size_t nmemb) {
+size_t post_cb(char *data, size_t size, size_t nmemb) {
 	return size * nmemb;
 }
 
-int libpb_post(char *text) {
+int libpb_post(const char *text) {
 	char *post_data;
 	char *post_data_prefix = "type=note&body=";
 	size_t length = strlen(text) + strlen(post_data_prefix);
