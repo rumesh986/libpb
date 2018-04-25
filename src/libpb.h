@@ -20,8 +20,8 @@
 
 typedef void (*libpb_cb_t)(char *message);
 
-int libpb_setup(char s_token[100]);
-int libpb_post(char *text);
+int libpb_setup(const char s_token[100]);
+int libpb_post(const char *text);
 void libpb_register_cb(libpb_cb_t cb_ptr);
 int libpb_get(void);
 void *libpb_get_stream();

@@ -32,7 +32,7 @@ libpb_cb_t registered_cb;
 
 
 
-int libpb_setup(char s_token[100]) {
+int libpb_setup(const char s_token[100]) {
 	strcpy(token, s_token);
 
 	strcpy(header_string, "Access-Token: ");
@@ -44,7 +44,7 @@ int libpb_setup(char s_token[100]) {
 	curl_global_init(CURL_GLOBAL_ALL);
 }
 
-size_t post_cb(char *data, size_t size, size_t nmemb) {
+size_t post_cb(const char *data, size_t size, size_t nmemb) {
 	return size * nmemb;
 }
 
